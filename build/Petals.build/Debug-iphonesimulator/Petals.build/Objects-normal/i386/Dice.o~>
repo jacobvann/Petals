@@ -1,0 +1,19 @@
+In file included from /Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:9:
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.h:24: error: property 'diceValue' with 'retain' attribute must be of object type
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:16: error: no declaration of property 'dicePicture' found in the interface
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:17: error: no declaration of property 'lowValue' found in the interface
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:18: error: no declaration of property 'highValue' found in the interface
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m: In function '-[Dice rollDice]':
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:21: error: accessing unknown 'highvalue' getter method
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:21: error: accessing unknown 'lowvalue' getter method
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:21: error: accessing unknown 'lowvalue' getter method
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m: In function '-[Dice init]':
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:30: warning: conflicting types for '-(void)init'
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:72: warning: previous declaration of '-(id)init'
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:31: error: request for member 'lowValue' in something not a structure or union
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:32: error: request for member 'highValue' in something not a structure or union
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m: At top level:
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:35: warning: property 'diceImage' requires method '-diceImage' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:35: warning: property 'diceImage' requires the method 'setDiceImage:' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m: In function '-[Dice setDiceValue:]':
+/Users/jvann/Documents/iPhone Dev/Petals/Classes/Dice.m:15: warning: passing argument 4 of 'objc_setProperty' makes pointer from integer without a cast
