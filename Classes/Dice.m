@@ -2,9 +2,11 @@
 //  Dice.m
 //  Petals
 //
+//
 //  Created by Jacob Vann on 8/16/11.
 //  Copyright 2011 Apple. All rights reserved.
 //
+// implements a simple 6-sided die object
 
 #import "Dice.h"
 #include <stdlib.h>
@@ -17,12 +19,12 @@
 @synthesize lowValue;
 @synthesize highValue;
 
+// select a random "side" of the die
 -(void) rollDice {
 	//diceValue = 5;
 	diceValue = rand() % (self.highValue - self.lowValue + 1) + self.lowValue;
 	NSLog(@"*********** setting dice value to %d\n", diceValue);
 }
-
 
 -(void) dealloc {
 	[dicePicture release];

@@ -8,8 +8,10 @@
 
 #import "FlipsideViewController.h"
 #import <CoreMotion/CoreMotion.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
+
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UITextFieldDelegate>  {
 	
 	IBOutlet UIImageView *diceView1;
 	IBOutlet UIImageView *diceView2;
@@ -20,6 +22,17 @@
     UIButton *goButton;
     
     UITextField *answerField; 
+    
+    int diceRotationHigh;
+    int diceRotationLow;
+    int diceXOffsetHigh;
+    int diceXOffsetLow;
+    int diceYOffsetHigh;
+    int diceYOffsetLow;
+    
+    SystemSoundID diceSoundID;
+
+    
 }
 
 @property (nonatomic, retain) UIImageView *diceView1;
@@ -28,13 +41,30 @@
 @property (nonatomic, retain) UIImageView *diceView4;
 @property (nonatomic, retain) UIImageView *diceView5;
 
+
+@property (nonatomic) int diceRotationHigh;
+@property (nonatomic) int diceRotationLow;
+@property (nonatomic) int diceXOffsetHigh;
+@property (nonatomic) int diceXOffsetLow;
+@property (nonatomic) int diceYOffsetHigh;
+@property (nonatomic) int diceYOffsetLow;
+
+@property (nonatomic) SystemSoundID diceSoundID;
+
 @property (nonatomic, retain) IBOutlet UITextField *answerField;
 
 @property (nonatomic, retain) IBOutlet UIButton *goButton;
+
+ 
 
 - (IBAction)showInfo;
 - (IBAction)textFieldDoneEditing:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)pressGo:(id) sender;
+
+- (void)shakeDice;
+- (void)animateDice;
+
+- (void)playDiceSound;
 
 @end
